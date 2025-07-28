@@ -46,7 +46,7 @@ static StreamInfo STREAMS[] = {
 // The maximum length of a log message in bytes, including the level marker and
 // tag, is defined as LOGGER_ENTRY_MAX_PAYLOAD in
 // platform/system/logging/liblog/include/log/log.h. As of API level 30, messages
-// longer than this will be be truncated by logcat. This limit has already been
+// longer than this will be truncated by logcat. This limit has already been
 // reduced at least once in the history of Android (from 4076 to 4068 between API
 // level 23 and 26), so leave some headroom.
 static const int MAX_BYTES_PER_WRITE = 4000;

@@ -3489,7 +3489,7 @@ class Win32ProcessTestCase(BaseTestCase):
 
     def test_startupinfo(self):
         # startupinfo argument
-        # We uses hardcoded constants, because we do not want to
+        # We use hardcoded constants, because we do not want to
         # depend on win32all.
         STARTF_USESHOWWINDOW = 1
         SW_MAXIMIZE = 3
