@@ -839,6 +839,9 @@ _PyObject_IS_GC(PyObject *obj)
 // Fast inlined version of PyObject_Hash(). Dictionaries are very
 // likely to include string keys (class and instance attributes,
 // json, ...) so we include a fast path for strings.
+// This function should not be used in a collection if str is not
+// very likely, since it is slower than PyObject_Hash() on types
+// other than str.
 static inline Py_ALWAYS_INLINE Py_hash_t
 _PyObject_HashDictKey(PyObject *op)
 {
